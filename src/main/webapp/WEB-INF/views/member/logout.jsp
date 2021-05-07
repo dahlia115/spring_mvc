@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>logout.jsp<br>
-
+	userId : ${requestScope.userId }<br>
+	userId : <%=request.getAttribute("userId") %><br>
+	userId : ${userId}<br>
 </body>
 </html>
