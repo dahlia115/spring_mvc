@@ -3,6 +3,7 @@ package com.care.mvc_ex01;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class MyController {
@@ -21,7 +22,10 @@ public class MyController {
 	}
 	
 	@RequestMapping("login")
-	public String memberLogin() {
-		return "member/login";
+	public ModelAndView memberLogin() {
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("login", "로그인 성공");
+		mv.setViewName("member/login");//경로
+		return mv;
 	}
 }
